@@ -14,27 +14,28 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="This research introduces a novel approach integrating 3D features and depth maps alongside RGB features to enhance action recognition accuracy. Our method involves processing estimated depth maps through a separate branch from the RGB feature encoder and fusing the features to understand the scene and actions comprehensively. Using the Side4Video framework and VideoMamba, which employ CLIP and VisionMamba for spatial feature extraction, our approach outperformed our implementation of the Side4Video network on the Something-Something V2 dataset.">
-  <meta property="og:title" content="DEAR: Depth-Estimated Action Recognition"/>
-  <meta property="og:description" content="This research introduces a novel approach integrating 3D features and depth maps alongside RGB features to enhance action recognition accuracy. Our method involves processing estimated depth maps through a separate branch from the RGB feature encoder and fusing the features to understand the scene and actions comprehensively. Using the Side4Video framework and VideoMamba, which employ CLIP and VisionMamba for spatial feature extraction, our approach outperformed our implementation of the Side4Video network on the Something-Something V2 dataset."/>
-  <meta property="og:url" content="https://andrewjohngilbert.github.io/dear/"/>
+  <meta name="description" content="The first generative model capable of simultaneous multi-object compositing, guided by both text and layout. Our model allows for the addition of multiple objects within a scene, capturing a range of interactions from simple positional relations (e.g., next to, in front of) to complex actions requiring reposing (e.g., hugging, playing guitar). When an interaction implies additional props, like `taking a selfie', our model autonomously generates these supporting objects.">
+  <meta property="og:title" content="Multitwine: Multi-Object Compositing with Text and Layout Control"/>
+  <meta property="og:description" content="The first generative model capable of simultaneous multi-object compositing, guided by both text and layout. Our model allows for the addition of multiple objects within a scene, capturing a range of interactions from simple positional relations (e.g., next to, in front of) to complex actions requiring reposing (e.g., hugging, playing guitar). When an interaction implies additional props, like `taking a selfie', our model autonomously generates these supporting objects."/>
+  <meta property="og:url" content="https://andrewjohngilbert.github.io/multitwine/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="assets/dear_Teaser.png" />
+  <meta property="og:image" content="assets/mutitwine_teaser.jpg" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="DEAR: Depth-Estimated Action Recognition">
-  <meta name="twitter:description" content="This research introduces a novel approach integrating 3D features and depth maps alongside RGB features to enhance action recognition accuracy. Our method involves processing estimated depth maps through a separate branch from the RGB feature encoder and fusing the features to understand the scene and actions comprehensively. Using the Side4Video framework and VideoMamba, which employ CLIP and VisionMamba for spatial feature extraction, our approach outperformed our implementation of the Side4Video network on the Something-Something V2 dataset">
+  <meta name="twitter:title" content="Multitwine: Multi-Object Compositing with Text and Layout Control">
+  <meta name="twitter:description" content="The first generative model capable of simultaneous multi-object compositing, guided by both text and layout. Our model allows for the addition of multiple objects within a scene, capturing a range of interactions from simple positional relations (e.g., next to, in front of) to complex actions requiring reposing (e.g., hugging, playing guitar). When an interaction implies additional props, like `taking a selfie', our model autonomously generates these supporting objects.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="asserts/dear_Teaser.png">
+  <meta name="twitter:image" content="asserts/mutitwine_teaser.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="Machine Learning, Depth, Video Understanding,andrew Gilbert, Sadegh Rahmani,">
+  <meta name="keywords" content="Machine Learning, John Collomosse, Andrew Gilbert, Computer Vision, Image Processing, Generative Models, Image Synthesis, Image Generation, Text to Image Generation, Multi-Object Compositing, Layout Control, 3D Understanding, Action Recognition, Depth Maps, RGB Features, Video Analysis">
+  <meta name="author" content="Gemma C Tarrés, Zhe Lin, Zhifei Zhang, H Zhang, Andrew Gilbert, John Collomosse, Soo Ye Kim">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>DEAR: Depth-Estimated Action Recognition</title>
+  <title>Multitwine: Multi-Object Compositing with Text and Layout Control</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -62,30 +63,36 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">DEAR: Depth-Estimated Action Recognition</h1>
+            <h1 class="title is-1 publication-title">Multitwine: Multi-Object Compositing with Text and Layout Control</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://www.linkedin.com/in/sadegh-rahmani" target="_blank">Sadegh Rahmani</a>[1]<sup></sup>,</span>
+                <a href="https://www.linkedin.com/in/gemmacanettarres" target="_blank">Gemma C Tarrés</a><sup>[1]</sup>,</span>
                 <span class="author-block">
-                  <a href="F" target="_blank">Filip Rybansky</a>[2]<sup></sup>,</span>
+                  <a href="https://research.adobe.com/person/zhe-lin/" target="_blank">Zhe Lin</a><sup>[2]</sup>,</span>
                   <span class="author-block">
-                    <a href="https://www.ncl.ac.uk/medical-sciences/people/profile/quocvuong.html" target="_blank">Quoc Vuong</a>[2]<sup></sup>,</span>
+                    <a href="https://research.adobe.com/person/zhifei-zhang/" target="_blank">Zhifei Zhang</a><sup>[2]</sup>,</span>                    
+                    <span class="author-block">
+                      <a href="ff" target="_blank">He Zhang</a><sup>[2]</sup>,</span>                                          
                 <span class="author-block">
-                  <a href="https://www.surrey.ac.uk/people/frank-guerin" target="_blank">Frank Guerin</a>[1]<sup></sup>,</span>
-                  <span class="author-block">
-                    <a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a>[1]<sup></sup>,</span>
-                  </div>
+                  <a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a><sup>[1]</sup>,</span>
+                <span class="author-block">
+                  <a href="http://personal.ee.surrey.ac.uk/Personal/J.Collomosse/" target="_blank">John Collomosse</a><sup>[1,2]</sup> </span>
+                <span class="author-block">
+                  <a href="https://sites.google.com/view/sooyekim" target="_blank">Soo Ye Kim</a>[2]
+                </span>                  
+                </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">[1] Unviersity of Surrey [2] Unviersityof Newcastle<br> <a href="https://eccv2024.ecva.net/" target="_blank">The European Conference of Computer Vision 2024</a> <a href="https://sites.google.com/view/hcvworkshop2024" target="_blank">Human-inspired Computer Vision Workshop</a>              
-                  </div>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">University of Surrey<sup>[1]</sup>, Adobe Resarch<sup>[2]</sup><br><a href="https://cvpr.thecvf.com/Conferences/2025" target="_blank">The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2025</a></span>
+              
+                </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://andrewjohngilbert.github.io/dear/assets/dear_paper.pdf" target="_blank"
+                        <a href="https://andrewjohngilbert.github.io/multitwine/assets/Mutitwine_Paper.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -94,7 +101,8 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
+                    <!-- Poster PDF link -->
+                     <!--
                    <span class="link-block">
                       <a href="assets/DEAR HCV Poster.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -104,17 +112,8 @@
                       <span>Poster</span>
                     </a>
                   </span>
- 
-                  <!-- Github link -->
-                <span class="link-block">
-                    <a href="https://github.com/SadeghRahmaniB/DEAR" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                  -->
+
               
 
                 
@@ -131,7 +130,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="assets/dear_teaser.jpg">
+      <img src="assets/mutitwine_teaser.jpg">
       <h2 class="subtitle has-text-centered">
         We perform supervised action recognition using a fusion of RGB and depth map frames. We used S4V network for processing RGB and the same network plus VideoMamba to extract depth features. Gated cross-attention (GCA) has been used for fusing modalities, while mean operation has been selected for fusing models' scores.
       </h2>
@@ -148,7 +147,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Detecting actions in videos, particularly within cluttered scenes, poses significant challenges due to the limitations of 2D frame analysis from a camera perspective. Unlike human vision, which benefits from 3D understanding, recognizing actions in such environments can be difficult. This research introduces a novel approach integrating 3D features and depth maps alongside RGB features to enhance action recognition accuracy. Our method involves processing estimated depth maps through a separate branch from the RGB feature encoder and fusing the features to understand the scene and actions comprehensively. Using the Side4Video framework and VideoMamba, which employ CLIP and VisionMamba for spatial feature extraction, our approach outperformed our implementation of the Side4Video network on the Something-Something V2 dataset.
+            We introduce the first generative model capable of simultaneous multi-object compositing, guided by both text and layout. Our model allows for the addition of multiple objects within a scene, capturing a range of interactions from simple positional relations (e.g., "next to", "in front of") to complex actions requiring reposing (e.g., "hugging", "playing guitar"). When an interaction implies additional props, like `taking a selfie', our model autonomously generates these supporting objects. By jointly training for compositing and subject-driven generation, also known as customization, we achieve a more balanced integration of textual and visual inputs for text-driven object compositing. As a result, we obtain a versatile model with state-of-the-art performance in both tasks. We further present a data generation pipeline leveraging visual and language models to effortlessly synthesize multimodal, aligned training data.
           </p>
         </div>
       </div>
@@ -157,6 +156,25 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Model overview-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Model Architecture</h2>
+      <img src="assets/MultitwineModel.png">
+      <h2 class="subtitle has-text-centered">
+        <p>Our model consists of: (i) A Stable Diffusion backbone including a U-Net and an
+          autoencoder (G, D); (ii) a text encoder (E<sub>T</sub>); (iii) an image encoder
+          (E<sub>I</sub>); and (iv) an adaptor (A). Given a text prompt (C) and images of N
+          objects (O<sub>0..N-1</sub>), the text embedding from (iii) is augmented by concatenating each
+          image embedding after their corresponding text tokens. The resulting multimodal embedding (H) is
+          fed to the U-Net via cross-attention. Masked background image ((1-M<sub>G</sub>)*I<sub>BG</sub>) and
+          layout (I<sub>L</sub>) with object-specific bboxes are concatenated to input (I). </p>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Model overview -->
 
 
 <!-- Paper poster -->

@@ -176,9 +176,72 @@
 </section>
 <!-- End Model overview -->
 
+<!-- Results 1-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Comparison to Generative Object Compositing Models</h2>
+      <img src="assets/Multitwinebaselinescomp.jpg">
+      <h2 class="subtitle has-text-centered">
+        <p>We compare to recent generative object compositing models. These models support compositing from a single
+          object, background, and bounding box, requiring sequential runs to add multiple objects individually. By
+          compositing multiple objects simultaneously rather than sequentially, Multitwine displays multiple
+          benefits: (i) it enables more cohesive harmonization and appearance consistency across objects and the
+          scene (rows 1 - 5);
+          (ii) it captures complex interactions involving object reposing with ease (rows 1, 6, 7); and (iii) with
+          text guidance, the model can naturally complete scenes by adding any additional elements needed for
+          realism (row 7). </p>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Results 1 -->
+
+<!-- Results 2-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Comparison to Customization Models</h2>
+      <img src="assets/MultitwineResults2.jpg">
+      <h2 class="subtitle has-text-centered">
+        <p>Our primary task is Object Compositing, but we also train for Subject-Driven Generation as an auxiliary
+          task for achieving a better balance between text and image alignment in the compositing task. As a side
+          effect, our model is also able to perform Multi-Entity Subject-Driven Generation, achieving comparable
+          performance to state-of-the-art customization models. </p>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Results 2 -->
+
+<!-- Applications-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Applications</h2>
+      <img src="assets/MultitwineApplications.jpg">
+      <h2 class="subtitle has-text-centered">
+        <p>Although not explicitly trained for them, our model exhibits some emerging capabilities.</p>
+          <p><b>Top Example (Multi-Object Generation):</b> our model is able to perform multi-object compositing with
+            more than two objects. By learning one-to-one object interactions, it develops a strong prior that allows it
+            to generalize to compositing multiple objects simultaneously.</p>
+          <p><b>Bottom Example (Subject-Driven Inpainting):</b> Our joint training on object compositing and
+            customization enables the model to learn key subtasks, such as background synthesis, blending,
+            harmonization, and reposing. These skills can be applied to subject-driven inpainting. In this task, the
+            model uses text and layout guidance to seamlessly complete a scene, generating and integrating additional
+            objects while maintaining a natural and coherent composition with the given visuals.</p>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Applications -->
+
+
+
+
 
 <!-- Paper poster -->
-
+<!--
   <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
@@ -190,6 +253,7 @@
       </div>
     </div>
   </section>
+-->
 <!--End paper poster -->
 
 
@@ -197,11 +261,11 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{Rahmani:Dear:ECCVWS:2024,
-        AUTHOR = Rahmani, Sadegh and Rybansky, Filip and Vuong, Quoc and Guerin, Frank and Gilbert, Andrew ",
-        TITLE = "DEAR: Depth-Estimated Action Recognition",
-        BOOKTITLE = " The European Conference of Computer Vision 2024, Human-inspired Computer Vision Workshop",
-        YEAR = "2024",
+      <pre><code>@inproceedings{Tarrés:Multitwine:CVPR:2025,
+        AUTHOR =  Tarrés, Gemma C and Lin, Zhe and Zhang, Zhifei and Zhang, He and Gilbert, Andrew and  Collomosse, John and Kim, Soo Ye",
+        TITLE = "Multitwine: Multi-Object Compositing with Text and Layout Control",
+        BOOKTITLE = "The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR'25)",
+        YEAR = "2025",
         }</code></pre>
     </div>
 </section>

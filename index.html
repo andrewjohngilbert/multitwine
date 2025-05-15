@@ -11,23 +11,43 @@
   gtag('config', 'G-81D6829LG0');
 </script>
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Multitwine: Multi-Object Compositing with Text and Layout Control",
+    "author": [
+      { "@type": "Person", "name": "Gemma C Tarrés" },
+      { "@type": "Person", "name": "Zhe Lin" },
+      { "@type": "Person", "name": "Zhifei Zhang" },
+      { "@type": "Person", "name": "He Zhang" },
+      { "@type": "Person", "name": "Andrew Gilbert" },
+      { "@type": "Person", "name": "John Collomosse" },
+      { "@type": "Person", "name": "Soo Ye Kim" }
+    ],
+    "publisher": "The IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "datePublished": "2025-05-15",
+    "url": "https://andrewjohngilbert.github.io/multitwine/"
+  }
+  </script>
+
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="The first generative model capable of simultaneous multi-object compositing, guided by both text and layout. Our model allows for the addition of multiple objects within a scene, capturing a range of interactions from simple positional relations (e.g., next to, in front of) to complex actions requiring reposing (e.g., hugging, playing guitar). When an interaction implies additional props, like `taking a selfie', our model autonomously generates these supporting objects.">
+  <meta name="description" content="Multitwine is the first generative model for simultaneous multi-object compositing, guided by text and layout. It enables complex interactions and autonomous prop generation for realistic scenes."/>
   <meta property="og:title" content="Multitwine: Multi-Object Compositing with Text and Layout Control"/>
-  <meta property="og:description" content="The first generative model capable of simultaneous multi-object compositing, guided by both text and layout. Our model allows for the addition of multiple objects within a scene, capturing a range of interactions from simple positional relations (e.g., next to, in front of) to complex actions requiring reposing (e.g., hugging, playing guitar). When an interaction implies additional props, like `taking a selfie', our model autonomously generates these supporting objects."/>
+  <meta property="og:description" content="Multitwine is the first generative model for simultaneous multi-object compositing, guided by text and layout. It enables complex interactions and autonomous prop generation for realistic scenes."/>
   <meta property="og:url" content="https://andrewjohngilbert.github.io/multitwine/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="assets/mutitwine_teaser.jpg" />
+  <meta property="og:image" content="assets/multitwine_teaser.jpg" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
   <meta name="twitter:title" content="Multitwine: Multi-Object Compositing with Text and Layout Control">
-  <meta name="twitter:description" content="The first generative model capable of simultaneous multi-object compositing, guided by both text and layout. Our model allows for the addition of multiple objects within a scene, capturing a range of interactions from simple positional relations (e.g., next to, in front of) to complex actions requiring reposing (e.g., hugging, playing guitar). When an interaction implies additional props, like `taking a selfie', our model autonomously generates these supporting objects.">
+  <meta name="twitter:description" content="Multitwine is the first generative model for simultaneous multi-object compositing, guided by text and layout. It enables complex interactions and autonomous prop generation for realistic scenes.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="asserts/mutitwine_teaser.jpg">
+  <meta name="twitter:image" content="asserts/multitwine_teaser.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="Machine Learning, John Collomosse, Andrew Gilbert, Computer Vision, Image Processing, Generative Models, Image Synthesis, Image Generation, Text to Image Generation, Multi-Object Compositing, Layout Control, 3D Understanding, Action Recognition, Depth Maps, RGB Features, Video Analysis">
@@ -73,7 +93,7 @@
                   <span class="author-block">
                     <a href="https://research.adobe.com/person/zhifei-zhang/" target="_blank">Zhifei Zhang</a><sup>[2]</sup>,</span>                    
                     <span class="author-block">
-                      <a href="ff" target="_blank">He Zhang</a><sup>[2]</sup>,</span>                                          
+                      <a href=https://sites.google.com/site/hezhangsprinter/" target="_blank">He Zhang</a><sup>[2]</sup>,</span>                                          
                 <span class="author-block">
                   <a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a><sup>[1]</sup>,</span>
                 <span class="author-block">
@@ -141,9 +161,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="assets/mutitwine_teaser.jpg">
+      <img src="assets/mutitwine_teaser.jpg" alt="Multitwine teaser showcasing multi-object compositing">
       <h2 class="subtitle has-text-centered">
-        We perform supervised action recognition using a fusion of RGB and depth map frames. We used S4V network for processing RGB and the same network plus VideoMamba to extract depth features. Gated cross-attention (GCA) has been used for fusing modalities, while mean operation has been selected for fusing models' scores.
+        Multitwine leverages RGB and depth map frames for supervised action recognition. Using the S4V network and VideoMamba, it extracts depth features and fuses modalities with Gated Cross-Attention (GCA), achieving robust multi-object compositing.
       </h2>
     </div>
   </div>
@@ -158,7 +178,9 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce the first generative model capable of simultaneous multi-object compositing, guided by both text and layout. Our model allows for the addition of multiple objects within a scene, capturing a range of interactions from simple positional relations (e.g., "next to", "in front of") to complex actions requiring reposing (e.g., "hugging", "playing guitar"). When an interaction implies additional props, like `taking a selfie', our model autonomously generates these supporting objects. By jointly training for compositing and subject-driven generation, also known as customization, we achieve a more balanced integration of textual and visual inputs for text-driven object compositing. As a result, we obtain a versatile model with state-of-the-art performance in both tasks. We further present a data generation pipeline leveraging visual and language models to effortlessly synthesize multimodal, aligned training data.
+        
+              Multitwine introduces a generative model for simultaneous multi-object compositing, guided by text and layout. It supports adding multiple objects to a scene, capturing interactions from simple positional relations (e.g., "next to") to complex actions (e.g., "hugging"). The model autonomously generates supporting props when needed (e.g., for "taking a selfie"). By jointly training for compositing and customization, Multitwine achieves state-of-the-art performance in both tasks, offering a versatile solution for text-driven object compositing.
+            
           </p>
         </div>
       </div>
@@ -174,13 +196,9 @@
       <h2 class="title is-3">Model Architecture</h2>
       <img src="assets/MultitwineModel.png">
       <h2 class="subtitle has-text-centered">
-        <p>Our model consists of: (i) A Stable Diffusion backbone including a U-Net and an
-          autoencoder (G, D); (ii) a text encoder (E<sub>T</sub>); (iii) an image encoder
-          (E<sub>I</sub>); and (iv) an adaptor (A). Given a text prompt (C) and images of N
-          objects (O<sub>0..N-1</sub>), the text embedding from (iii) is augmented by concatenating each
-          image embedding after their corresponding text tokens. The resulting multimodal embedding (H) is
-          fed to the U-Net via cross-attention. Masked background image ((1-M<sub>G</sub>)*I<sub>BG</sub>) and
-          layout (I<sub>L</sub>) with object-specific bboxes are concatenated to input (I). </p>
+        <p>
+          Our model integrates a Stable Diffusion backbone with a U-Net, autoencoder, text encoder, image encoder, and an adaptor. It combines text and image embeddings to create a multimodal representation, enabling seamless multi-object compositing with layout and background harmonization.
+</p>
       </h2>
     </div>
   </div>
@@ -194,14 +212,7 @@
       <h2 class="title is-3">Comparison to Generative Object Compositing Models</h2>
       <img src="assets/Multitwinebaselinescomp.jpg">
       <h2 class="subtitle has-text-centered">
-        <p>We compare to recent generative object compositing models. These models support compositing from a single
-          object, background, and bounding box, requiring sequential runs to add multiple objects individually. By
-          compositing multiple objects simultaneously rather than sequentially, Multitwine displays multiple
-          benefits: (i) it enables more cohesive harmonization and appearance consistency across objects and the
-          scene (rows 1 - 5);
-          (ii) it captures complex interactions involving object reposing with ease (rows 1, 6, 7); and (iii) with
-          text guidance, the model can naturally complete scenes by adding any additional elements needed for
-          realism (row 7). </p>
+        <p>Multitwine outperforms recent generative object compositing models by enabling simultaneous multi-object compositing. This approach ensures cohesive harmonization, captures complex interactions (e.g., reposing), and autonomously adds elements for realism.</p>
       </h2>
     </div>
   </div>
@@ -232,15 +243,9 @@
       <h2 class="title is-3">Applications</h2>
       <img src="assets/MultitwineApplications.jpg">
       <h2 class="subtitle has-text-centered">
-        <p>Although not explicitly trained for them, our model exhibits some emerging capabilities.</p>
-          <p><b>Top Example (Multi-Object Generation):</b> our model is able to perform multi-object compositing with
-            more than two objects. By learning one-to-one object interactions, it develops a strong prior that allows it
-            to generalize to compositing multiple objects simultaneously.</p>
-          <p><b>Bottom Example (Subject-Driven Inpainting):</b> Our joint training on object compositing and
-            customization enables the model to learn key subtasks, such as background synthesis, blending,
-            harmonization, and reposing. These skills can be applied to subject-driven inpainting. In this task, the
-            model uses text and layout guidance to seamlessly complete a scene, generating and integrating additional
-            objects while maintaining a natural and coherent composition with the given visuals.</p>
+        <p>Multitwine demonstrates emerging capabilities, including:
+          <b>Multi-Object Generation:</b> Compositing multiple objects simultaneously with cohesive interactions.
+          <b>Subject-Driven Inpainting:</b> Seamlessly completing scenes by generating and integrating additional objects guided by text and layout.</p>
       </h2>
     </div>
   </div>
@@ -273,7 +278,7 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@inproceedings{Tarrés:Multitwine:CVPR:2025,
-        AUTHOR =  Tarrés, Gemma C and Lin, Zhe and Zhang, Zhifei and Zhang, He and Gilbert, Andrew and  Collomosse, John and Kim, Soo Ye",
+        AUTHOR =  "Tarrés, Gemma C and Lin, Zhe and Zhang, Zhifei and Zhang, He and Gilbert, Andrew and  Collomosse, John and Kim, Soo Ye",
         TITLE = "Multitwine: Multi-Object Compositing with Text and Layout Control",
         BOOKTITLE = "The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR'25)",
         YEAR = "2025",
@@ -290,9 +295,10 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            <strong>Multitwine: Multi-Object Compositing with Text and Layout Control</strong> by <a href="https://andrewjohngilbert.github.io/" target="_blank">Andrew Gilbert</a>, <a href="https://www.linkedin.com/in/gemmacanettarres" target="_blank">Gemma C Tarrés</a>, <a href="https://research.adobe.com/person/zhe-lin/" target="_blank">Zhe Lin</a>, <a href="https://research.adobe.com/person/zhifei-zhang/" target="_blank">Zhifei Zhang</a>, <a href="https://sites.google.com/site/hezhangsprinter/" target="_blank">He Zhang</a>, <a href="http://personal.ee.surrey.ac.uk/Personal/J.Collomosse/" target="_blank">John Collomosse</a>, and <a href="https://sites.google.com/view/sooyekim" target="_blank">Soo Ye Kim</a>.
+            <br>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. Feel free to reuse this template, but please include a link back to this page. <br> Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
           </p>
 
         </div>
